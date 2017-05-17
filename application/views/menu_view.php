@@ -13,11 +13,13 @@
 	<div class="collapse navbar-collapse" id="bs-nav">
 		<ul class="nav navbar-nav">
 			<li class="active"> <a href="<?php echo base_url();?>">Principal</a></li>
-			<li><a href="<?php echo base_url('quienes_somos');?>">Quienes somos</a></li>
+			<li> <a href="<?php echo base_url('login')?>">Login</a></li>
+			<li><a href="<?php echo base_url('quienes_somos');?>">Quiénes somos</a></li>
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu-Desplegable <span class="caret"></span></a>
 				<ul class="dropdown-menu">
 					<li> <a href="<?php echo base_url();?>">Principal</a></li>
+					
 					<li> <a href="<?php echo base_url('carrito')?>">Carrito</a></li>
 					<!-- uso una linea para dividir secciones del menu desplegable -->
 					<li class="divider"></li>

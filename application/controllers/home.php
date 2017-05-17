@@ -33,6 +33,16 @@ class Home extends CI_Controller {
 		$this->load->view('carrito');
 		$this->load->view('footer_view');
 	}
+	
+	public function login(){
+		$data = array('titulo' => 'Acceso');
+		$this->load->view('head_view',$data);
+		$this->load->view('menu_view');
+		$this->load->view('login_views');
+		$this->load->view('footer_view');
+	}
+	
+	
 
 }
 /**
