@@ -13,9 +13,16 @@
 	<div class="collapse navbar-collapse" id="bs-nav">
 		<ul class="nav navbar-nav">
 			<li class="active"> <a href="<?php echo base_url();?>">Principal</a></li>
-			<li> <a href="<?php echo base_url('login')?>">Login</a></li>
-			<li><a href="<?php echo base_url('quienes_somos');?>">Quiénes somos</a></li>
-			<li class="dropdown">
+			<!-- Verifico si el usuario no está logueado, entonces muestra los enlaces para ingresar o registrarse -->
+			<?php if(!isset($_SESSION['logued_in'])){ ?>
+				<li> <a href="<?php echo base_url('login')?>">Login</a></li>
+				<li> <a href="<?php echo base_url('registro')?>">Registrarse</a></li>
+				<!-- Si no, muestro la página de perfil -->
+			<?php }else{ ?>
+			<li><a href="<?php echo base_url('perfil/'.$user);?>">Mi perfil</a></li>
+			<?php } ?>
+				<li><a href="<?php echo base_url('quienes_somos');?>">Quiénes somos</a></li>
+				<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu-Desplegable <span class="caret"></span></a>
 				<ul class="dropdown-menu">
 					<li> <a href="<?php echo base_url();?>">Principal</a></li>

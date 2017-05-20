@@ -52,6 +52,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'home';
 $route['carrito'] = 'home/carrito';
 $route['login'] = 'home/login';
+$route['salir'] = 'login/logout';
+$route['registro'] = 'home/registro';
+$route['nuevo_usuario']='usuario/nuevo_usuario';
+//Cargo el perfil con pasando el id del usuario
+$route['perfil/(:num)'] = 'usuario/index/$1';
 $route['quienes_somos'] = 'home/quienes_somos';
 $route['verificar_usuario'] = 'login';
 $route['404_override'] = '';

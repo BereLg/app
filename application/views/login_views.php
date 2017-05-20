@@ -1,7 +1,8 @@
 <div class="container">
 	<div class="row">
-		<div class="col-sm-6 col-md-4 col-md-offset-4">
-			<h1 class="text-center login-title">Inicie sesión para continuar</h1>
+		<div class="col-sm-6 col-md-6 col-sm-offset-3">
+			<h2 class="text-center login-title">¿Ya es usuario? Inicie sesión</h2>
+			<!-- Genero un formulario para loguearse -->
 			<?php echo validation_errors(); ?>
 			<div class="account-wall">
 				<?php echo form_open('verificar_usuario', ['class' => 'form-signin', 'role' => 'form']); ?>
